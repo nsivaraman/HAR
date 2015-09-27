@@ -1,6 +1,6 @@
 # HAR
 Getting and Cleaning Data Project Human Activity Recognition on Smart Phones
-Readme.md 
+==============
 Created: 	9/26/2015
 Author:		N Sivaraman
 
@@ -17,14 +17,16 @@ What does the script do:
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 How to run
-1. Unzip the data downloaded from url above to any folder
-2. Start R (I wrote and tested in version 3.2.2, please try and use that version or higher)
-3. Change working directory using the R command setwd() Ex. setwd("c:/class/r/proj"). The working folder should be the folder data was unzipped to
-4. If you have not installed dplyr package, the script will install it but you need to be connected to the internet.
-5. Run script using source("run_analysis.R")
-Note: I copied the script to the data folder also the working folder set in step 3 above. If the script is located elsewhere make sure to provide
+- Unzip the data downloaded from url above to any folder
+- Start R (I wrote and tested in version 3.2.2, please try and use that version or higher)
+- Change working directory using the R command setwd() Ex. setwd("c:/class/r/proj"). The working folder should be the folder data was unzipped to
+	setwd("c:/class/r/proj")
+- If you have not installed dplyr package, the script will install it but you need to be connected to the internet.
+- Run script using source("run_analysis.R")
+	source("run_analysis.R")
+*Note: I copied the script to the data folder also the working folder set in step 3 above. If the script is located elsewhere make sure to provide
 	the full path in the source command in step 5.
-Note: for debugging purposes I have not removed any of the intermediate tables, if memory is an issue you can uncomment the rm() lines
+Note: for debugging purposes I have not removed any of the intermediate tables, if memory is an issue you can uncomment the rm() lines*
 
 Results of the script
 After the script runs successfully it will create the output file UCI_HAR_Summary.txt in the working folder
