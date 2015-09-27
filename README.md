@@ -31,13 +31,17 @@ How to run
 	source("run_analysis.R")
 
 *Note: I copied the script to the data folder also the working folder set in step 3 above. If the script is located elsewhere make sure to provide
-	the full path in the source command in step 5.
-Note: for debugging purposes I have not removed any of the intermediate tables, if memory is an issue you can uncomment the rm() lines*
+	the full path in the source command in step 5.*
+
+*Note: for debugging purposes I have not removed any of the intermediate tables, if memory is an issue you can uncomment the rm() lines*
 
 Results of the script
 After the script runs successfully it will create the output file UCI_HAR_Summary.txt in the working folder
+
 You can view the results using the View command View(dfSumm)
+
 You can read the file using read.table('UCI_HAR_Summary.txt',header=TRUE)"
+
 You can view the details before the summary step using View(dfAll)
 
 What are the files in the repo
