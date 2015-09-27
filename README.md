@@ -21,6 +21,7 @@ Unzip the data downloaded from url above to any folder
 Start R (I wrote and tested in version 3.2.2, please try and use that version or higher)
 Change working directory using the R command setwd() Ex. setwd("c:/class/r/proj")
 If you have not installed dplyr package, the script will install it but you need to be connected to the internet.
+Run script using source("run_analysis.R")
 Note: for debugging purposes I have not removed any of the intermediate tables, if memory is an issue you can uncomment the rm() lines
 
 Results of the script
