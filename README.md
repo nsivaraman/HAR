@@ -1,6 +1,6 @@
 # HAR
 Getting and Cleaning Data Project Human Activity Recognition on Smart Phones
-==============
+--------------
 Created: 	9/26/2015
 
 Author:		N Sivaraman
