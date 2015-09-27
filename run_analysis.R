@@ -7,17 +7,20 @@
 ## 4. Appropriately labels the data set with descriptive variable names. 
 ## 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+## Make sure to change folder to the data folder
+## Change to data folder
+## setwd("c:/class/r/proj")
+
 ## Each data set test and training is in 3 files
 ## first let us combine the subject_.txt, X_.txt and Y_.txt of test and training
-## Note I'm always using test first
+## Note: I'm always using test first
+
 ## function to check if a package is installed
 is.installed <- function(mypkg) is.element(mypkg, installed.packages()[,1]) ## Ex. is.installed("dplyr")
 ## check if dplyr is installed and install if not
 if (!is.installed("dplyr")) install.packages("dplyr")
 ## Load library dplyr
 library(dplyr)
-# Change to data folder
-setwd("c:/class/r/proj")
 
 ## Start objective 1. Merges the training and the test sets to create one data set.
 #Load test X file into a data frame
@@ -30,6 +33,11 @@ dfTrain<-read.table("train/X_train.txt")
 
 ## combine rows of test and training
 dfTestTrain<-bind_rows(dfTest,dfTrain)
+
+## now we can remove the test and train tables
+## these can be uncommented if memory becomes an issue
+## rm(dfTest)
+## rm(dfTrain)
 
 ## Set variable/column names for the data frame
 ## variable name are in features.txt file
@@ -45,11 +53,21 @@ dfTestTrainSubjects<-bind_rows(dfTestSubjects,dfTrainSubjects)
 ## set column name
 names(dfTestTrainSubjects)[1]="Subject"
 
+## now we can remove the test and train tables
+## these can be uncommented if memory becomes an issue
+## rm(dfTestSubjects)
+## rm(dfTrainSubjects)
+
 ## Load and combine Y_ files
 dfTestActivity<-read.table("test/y_test.txt")
 dfTrainActivity<-read.table("train/y_train.txt")
 dfTestTrainActivity<-bind_rows(dfTestActivity,dfTrainActivity)
 names(dfTestTrainActivity)[1]="Activity"
+
+## now we can remove the test and train tables
+## these can be uncommented if memory becomes an issue
+## rm(dfTestActivity)
+## rm(dfTrainActivity)
 
 ## End objective 1. Merges the training and the test sets to create one data set.
 
@@ -80,6 +98,12 @@ dfTestTrainActivity<-mutate(dfTestTrainActivity,Activity=activityName(Activity))
 
 ## let's combine the 3 data frames
 dfAll<-bind_cols(dfTestTrainSubjects,dfTestTrainActivity,dfTestTrain)
+
+## now we can remove the intermediate tables
+## these can be uncommented if memory becomes an issue
+## rm(dfTestTrainSubjects)
+## rm(dfTestTrainActivity)
+## rm(dfTestTrain)
 
 ## group by subject and activity
 dfGrouped<-group_by(dfAll,Activity,Subject)
