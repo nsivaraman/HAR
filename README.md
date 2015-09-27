@@ -10,6 +10,7 @@ The data input for the script is data collected from the accelerometers from the
 Data can be obtained from [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
 What does the script do:
+
 1.  Merges the training and the test sets to create one data set.
 2.  Extracts only the measurements on the mean and standard deviation for each measurement. 
 3.  Uses descriptive activity names to name the activities in the data set
@@ -17,6 +18,7 @@ What does the script do:
 5.  From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 How to run
+
 - Unzip the data downloaded from url above to any folder
 - Start R (I wrote and tested in version 3.2.2, please try and use that version or higher)
 - Change working directory using the R command setwd() Ex. setwd("c:/class/r/proj"). The working folder should be the folder data was unzipped to
