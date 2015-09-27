@@ -2,6 +2,7 @@
 Getting and Cleaning Data Project Human Activity Recognition on Smart Phones
 ==============
 Created: 	9/26/2015
+
 Author:		N Sivaraman
 
 
@@ -19,13 +20,16 @@ What does the script do:
 
 How to run
 
-- Unzip the data downloaded from url above to any folder
-- Start R (I wrote and tested in version 3.2.2, please try and use that version or higher)
-- Change working directory using the R command setwd() Ex. setwd("c:/class/r/proj"). The working folder should be the folder data was unzipped to
+1. Unzip the data downloaded from url above to any folder
+2. Start R (I wrote and tested in version 3.2.2, please try and use that version or higher)
+3. Change working directory using the R command setwd() Ex. setwd("c:/class/r/proj"). The working folder should be the folder data was unzipped to
+
 	setwd("c:/class/r/proj")
-- If you have not installed dplyr package, the script will install it but you need to be connected to the internet.
-- Run script using source("run_analysis.R")
+4. If you have not installed dplyr package, the script will install it but you need to be connected to the internet.
+5. Run script using source("run_analysis.R")
+
 	source("run_analysis.R")
+
 *Note: I copied the script to the data folder also the working folder set in step 3 above. If the script is located elsewhere make sure to provide
 	the full path in the source command in step 5.
 Note: for debugging purposes I have not removed any of the intermediate tables, if memory is an issue you can uncomment the rm() lines*
@@ -37,6 +41,7 @@ You can read the file using read.table('UCI_HAR_Summary.txt',header=TRUE)"
 You can view the details before the summary step using View(dfAll)
 
 What are the files in the repo
+
 1. This file README.md
 2. The script file run_analysis.R
 3. UCI_HAR_Summary.txt output from running the script file
